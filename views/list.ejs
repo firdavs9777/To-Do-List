@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="box" id="heading">
+
+
+    <h1>Welcome to daily planner website!</h1>
+<h2> Today is <%= kindOfDay %></h2>
+</div>
+
+<div class="box">
+<p>You can add activities to do for today!</p>
+
+<% for (var i=0; i<NewListItems.length;i++){ %>
+<div class="item">
+  <input type="checkbox">
+  <p><%= NewListItems[i] %></p>
+</div>
+
+<%} %>
+<form class="item" action="/" method="post">
+<input type="text" name="newItem" value="" placeholder="New Item" autocomplete="off">
+<button type="submit" name="button">Add</button>
+</form>
+</div>
+<footer>
+<p class="mt-5 mb-3 below text-muted">&copy; The App Wild Company (Dream company that is coming true soon!) </p
+</footer>
+  </body>
+</html>
